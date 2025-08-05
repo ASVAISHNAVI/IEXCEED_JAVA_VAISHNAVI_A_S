@@ -1,0 +1,22 @@
+public class StaticBlockExample {
+
+    static int count;
+
+ 
+    static {
+        System.out.println("Static block is executed.");
+        count = 10;
+    }
+
+    StaticBlockExample() {
+        System.out.println("Constructor is called.");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method is executed.");
+        System.out.println("Count: " + count);
+
+        StaticBlockExample obj1 = new StaticBlockExample();
+        StaticBlockExample obj2 = new StaticBlockExample();
+    }
+}
