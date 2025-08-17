@@ -1,0 +1,48 @@
++------------------------------------+
+|      HospitalManagementSystem      |
++------------------------------------+
+| - doctors: List<Doctor>            |
+| - appointments: List<Appointment>  |
+| - sc: Scanner                      |
++------------------------------------+
+| + main(args: String[]): void       |
+| + showDoctors(): void              |
+| + bookAppointment(): void          |
+| + displayAppointments(): void      |
+| + generateBilling(): void          |
++------------------------------------+
+                |
+                | manages
+                v
++------------------------------------+
+|            Appointment             |
++------------------------------------+
+| - patientName: String              |
+| - doctor: Doctor                   |
+| - fee: double                      |
++------------------------------------+
+| + toString(): String               |
++------------------------------------+
+                |
+                | uses
+                v
++------------------------------------+
+|              Doctor                |
++------------------------------------+
+| - id: int                          |
+| - name: String                     |
+| - specialization: String           |
++------------------------------------+
+| + toString(): String               |
++------------------------------------+
+
++------------------------------------+
+|        AppointmentThread           |
++------------------------------------+
+| - appointment: Appointment         |
++------------------------------------+
+| + run(): void                      |
++------------------------------------+
+
+HospitalManagementSystem --> AppointmentThread (creates)
+AppointmentThread -------> Appointment (has)
